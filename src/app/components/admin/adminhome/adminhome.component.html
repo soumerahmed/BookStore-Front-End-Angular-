@@ -1,0 +1,62 @@
+
+<button mat-raised-button color="primary" style="margin-left: 1.83cm;"
+(click)="openDialogAdd()">
+   <mat-icon>add_circle</mat-icon> addBook 
+</button>
+
+    <table mat-table  class="mat-elevation-z8" >
+     <thead>
+        <tr>   
+            <td><strong>idBook</strong></td>
+            <td><strong>ProductDesignation</strong></td>
+            <td><strong>ProductReference</strong></td>
+            <td><strong>QuatiteInStock</strong></td>
+            <td><strong>Price</strong></td>
+            <td><strong>BookTitle</strong></td>
+            <td><strong>BookAuthor</strong></td>
+            <td><strong>DateEdition</strong></td>
+            <td><strong>Action</strong></td>
+            <td><strong>Action</strong></td>
+            <td><strong>Action</strong></td>
+        </tr>
+     </thead>
+<tbody>
+    <tr *ngFor="let item of books | async">
+       
+        <ng-container>
+        <td>{{item.idBook}}</td> 
+         
+        <td>{{item.productDesignation}}</td> 
+         
+         <ng-container><td>{{item.productReference}}</td></ng-container> 
+         
+         <ng-container><td>{{item.quatiteInStock}}</td></ng-container> 
+         
+         <ng-container><td>{{item.price|number}}</td></ng-container> 
+         
+         <ng-container><td>{{item.bookTitle}}</td></ng-container> 
+         
+         <ng-container><td>{{item.bookAuthor}}</td></ng-container> 
+         
+         <ng-container><td>{{item.dateEdition |date}}</td></ng-container> 
+         
+         <ng-container>
+             <td><button type="submit" mat-mini-fab color="warn" (click)="deleteBook(item.idBook)">
+                <mat-icon>delete</mat-icon> </button></td>
+        </ng-container> 
+         
+         <ng-container>
+             <td><button mat-mini-fab color="black" (click)="openDialog(item.idBook)">
+                <mat-icon>edit</mat-icon> </button></td> 
+        </ng-container>
+        
+        <ng-container>
+            <td><button mat-mini-fab color="black" (click)="openDialogDetails(item.idBook)">
+               <mat-icon>details</mat-icon> </button></td> 
+       </ng-container>
+
+    </ng-container>       
+        
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,66 @@
+
+  <div [hidden]="submitted">
+    <form [formGroup]="bookForm" >
+
+        
+
+
+        <mat-form-field appearance="outline" style="margin-left: 0.5cm; margin-right: 0.5cm;
+        margin-top: 0.5cm; margin-bottom: 0.5cm;">
+        
+            <mat-label>productDesignation:</mat-label>
+          <input matInput type="text" formControlName="productDesignation">
+        
+    </mat-form-field>
+      
+        <mat-form-field appearance="outline" style="margin-left: 0.5cm; margin-right: 0.5cm;
+        margin-top:0.5cm; margin-bottom: 0.5cm;">
+
+            <mat-label>productReference:</mat-label>
+          <input matInput type="text" formControlName="productReference">
+        
+    </mat-form-field>
+
+        <mat-form-field appearance="outline" style="margin-left: 0.5cm; margin-right: 0.5cm;
+        margin-top: 0.5cm; margin-bottom:0.5cm;">
+        
+            <mat-label>quatiteInStock:</mat-label>    
+          <input matInput type="number" formControlName="quatiteInStock">
+        
+    </mat-form-field>
+      
+        <mat-form-field appearance="outline" style="margin-left: 0.5cm; margin-right: 0.5cm;
+        margin-top: 0.5cm; margin-bottom: 0.5cm;">
+        
+            <mat-label> price:</mat-label>
+          <input matInput type="number" formControlName="price">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="margin-left:0.5cm; margin-right: 0.5cm;
+        margin-top: 0.5cm; margin-bottom: 0.5cm;">
+        
+            <mat-label>bookTitle:</mat-label>
+          <input matInput type="text" formControlName="bookTitle">
+    
+    </mat-form-field>
+      
+        <mat-form-field appearance="outline" style="margin-left: 0.5cm; margin-right: 0.5cm;
+        margin-top: 0.5cm; margin-bottom: 0.5cm;">
+            <mat-label>bookAuthor:</mat-label>
+            
+          <input matInput type="text" formControlName="bookAuthor">
+        
+    </mat-form-field>
+
+        <mat-form-field appearance="outline"style="margin-left: 0.5cm; margin-right: 0.5cm;
+        margin-top: 0.5cm; margin-bottom: 0.5cm;">
+        
+            <mat-label>dateEdition:</mat-label>    
+          <input matInput type="date" formControlName="dateEdition">
+
+    </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" style="margin-left: 1cm; margin-right: 1cm;
+      margin-top: 0.5cm; margin-bottom: 0.5cm;" (click)="saveBook()">addBook</button>
+      </form>

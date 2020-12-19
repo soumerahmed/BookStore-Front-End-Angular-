@@ -1,0 +1,65 @@
+
+
+
+
+<div class="example-box" cdkDragLockAxis="y" cdkDrag>
+<div class="example-button-container" style="text-align: initial;">
+    
+    <div style="color: rgb(212, 48, 48);margin-left: 0.87cm;margin-bottom: 0cm;"><strong>+{{nbrLine}}</strong></div>
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    (click)="openDialogShop()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+    
+  </div>
+</div>
+
+
+<mat-grid-list cols="3" rowHeight="1:1">
+<mat-grid-tile *ngFor="let item of books | async">
+<mat-card style="width: 10cm; height: 9cm; margin-left: 3cm; margin-right: 3cm;
+margin-top: 2cm;margin-bottom: 2cm;">
+
+<div *ngIf = "item.quatiteInStock != 0 ">
+<mat-card-subtitle  style="color: green;text-align: center;">Disponible<mat-icon>check_circle_outline</mat-icon></mat-card-subtitle>
+</div>
+<div *ngIf = "item.quatiteInStock == 0 ">
+    <mat-card-subtitle style="color:red;text-align: center;">Not Disponible<mat-icon>clear</mat-icon></mat-card-subtitle>
+</div>
+
+
+<mat-card-content>
+    <img src="../../../assets/images/098e1a95-c754-4a8b-b7da-acedc702aae1.jpg" 
+    alt="" style="width: 5cm;height: 3cm;">
+    
+</mat-card-content>
+
+
+
+<mat-card-footer style="margin-left: 1.3cm;" >
+    <strong>Price : {{item.price}} DT </strong>
+</mat-card-footer>
+
+<mat-card-actions >
+    <button mat-raised-button  (click)="openDialog(item.idBook)" style="margin-left: 1cm;" >
+        <mat-icon>read_more</mat-icon></button>
+    <button mat-raised-button (click)="addLineCommand(item.idBook)" >
+        <mat-icon>shopping_cart</mat-icon></button>
+           
+        
+        
+        <form [formGroup]="quantityForm">
+           <input matInput formControlName="quantity" type="number"  max="5" min="1" placeholder="Quantity"
+           style="margin-left: 1.7cm; margin-top: 0.5cm;width: 2cm;">
+        </form>
+    
+
+
+</mat-card-actions>
+
+
+</mat-card>
+</mat-grid-tile>
+</mat-grid-list>
+
+

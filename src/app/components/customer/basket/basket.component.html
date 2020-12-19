@@ -1,0 +1,22 @@
+
+<div *ngFor = "let item of lineCommands |async">
+
+<table mat-table  class="mat-elevation-z8" >
+<p>idLineCommand : {{item.idLineCommand}}
+    <button mat-button type="submit" mat-mini  (click)="deleteLine(item.idLineCommand)">
+    <mat-icon>delete</mat-icon></button></p>
+    
+<p>Quantity LineCommand : {{item.qt}}</p>
+<p>idBook : {{item.book.idBook}} </p>
+<p>idBill : {{item.bill.idBill}} </p>
+</table>
+
+</div>
+<br>
+<p style="display: flex;justify-content: center;"><strong>Price Total = {{total |json}} DT</strong></p>
+<br>
+
+<div style="display: flex;justify-content: center;">
+    <button mat-button type="submit" style="background-color: green;margin-right: 0.2cm;"  (click)="buyYes()">Buy</button>
+    <button mat-button type="submit" mat-mini style="background-color:  dimgrey;" (click)="back()">Back</button>
+</div>

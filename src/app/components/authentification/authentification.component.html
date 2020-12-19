@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+<mat-card style=" width: 90%;
+height: 90%;
+margin: auto;
+margin-top: 0.8cm;
+">
+<mat-card style="height: 5cm;width: 7cm;margin-left: 12cm;">
+    <mat-card-content>
+<img src="../../../assets/images/homePPPP.jpg" alt="" style="height: 5cm;width: 7cm;">
+    </mat-card-content>
+</mat-card>
+
+
+<table mat-table >
+
+
+<mat-grid-list cols="2" rowHeight="2:1" >
+    
+    
+    <mat-grid-tile style="height: 15 cm;">
+
+    <mat-grid-tile-header style="color: black; background-color:white;">
+    <p><strong style="margin-left: 3cm;"><mat-icon>account_circle</mat-icon>Administrator</strong></p>
+    </mat-grid-tile-header>
+    
+    
+
+    
+        <mat-card style="height: 4cm; width: 7cm;">
+            <mat-card-content>
+            <img src="../../../assets/images/client2.png" alt=""
+          style="height: 4cm; width: 7cm;margin: auto;">
+            </mat-card-content>
+        </mat-card>
+    
+
+
+    <mat-grid-tile-footer  style="color: black; background-color:white;">
+        <p>
+        <mat-icon style="margin-left: 3cm;">build</mat-icon>
+        <button mat-raised-button style="margin-left: 2cm;" (click)="openAdminBord()">
+            <strong>Login</strong><mat-icon>send</mat-icon>
+        </button>
+        <mat-icon style="margin-left: 2cm;">build</mat-icon>
+        </p>
+    </mat-grid-tile-footer>
+
+</mat-grid-tile>
+    
+
+    
+
+
+
+
+
+
+
+
+
+     
+    <mat-grid-tile >
+        <mat-grid-tile-header style="color: black; background-color:white;">
+        <p><strong style="margin-left: 3cm;"><mat-icon>account_circle</mat-icon>Customer</strong></p>
+        </mat-grid-tile-header>
+
+    
+        <mat-card style="height: 4cm; width: 7cm;">
+            <mat-card-content>
+            <img src="../../../assets/images/client3.jpg" alt=""
+            style="height: 4cm; width: 7cm ; margin: auto;">
+            </mat-card-content>
+        </mat-card>
+    
+
+<mat-grid-tile-footer  style="color: black; background-color:white;">
+    <p>
+        <mat-icon style="margin-left: 3cm;">remove_shopping_cart</mat-icon>
+        <button mat-raised-button style="margin-left: 2cm;"(click)="openCustomerBord()">
+            <strong>Login</strong><mat-icon>send</mat-icon>
+        </button>
+        <mat-icon style="margin-left: 2cm;">shopping_cart</mat-icon>
+        </p>
+</mat-grid-tile-footer>
+
+
+
+    </mat-grid-tile>
+
+
+</mat-grid-list>
+
+
+
+
+
+
+</table>
+</mat-card>
